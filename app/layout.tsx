@@ -7,7 +7,7 @@ import "@fontsource/playfair-display/500.css";
 import "@fontsource/playfair-display/600.css";
 import "./globals.css";
 
-const siteUrl = "https://concreboxpty.com";
+const siteUrl = "https://concrebox.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -38,6 +38,7 @@ export const metadata: Metadata = {
         alt: "Casa modular contemporánea CONCREBOX en Panamá",
       },
     ],
+    authors: ["https://www.facebook.com/ConcreboxPTY"],
   },
   twitter: {
     card: "summary_large_image",
@@ -82,6 +83,16 @@ const localBusinessSchema = {
   sameAs: [
     "https://www.instagram.com/concrebox_pty/",
     "https://www.facebook.com/ConcreboxPTY",
+    "https://wa.me/50768272867",
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+50768272867",
+      contactType: "WhatsApp",
+      areaServed: "PA",
+      availableLanguage: ["es", "en"],
+    },
   ],
 };
 
