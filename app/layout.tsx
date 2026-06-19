@@ -6,6 +6,7 @@ import "@fontsource/manrope/700.css";
 import "@fontsource/playfair-display/500.css";
 import "@fontsource/playfair-display/600.css";
 import "./globals.css";
+import "./catalog.css";
 
 const siteUrl = "https://concrebox.vercel.app";
 

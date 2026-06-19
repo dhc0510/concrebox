@@ -27,6 +27,7 @@ import {
 import { useEffect, useRef, useState } from "react";
 import { Logo } from "./Logo";
 import { Reveal } from "./Reveal";
+import { CatalogSection } from "./CatalogSection";
 
 const whatsapp =
   "https://wa.me/50768272867?text=Hola%2C%20vi%20la%20p%C3%A1gina%20de%20CONCREBOX%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20casas%20modulares.";
@@ -56,6 +57,7 @@ const navItems = [
   ["Preguntas frecuentes", "#faq"],
   ["Beneficios", "#beneficios"],
   ["Modelos", "#modelos"],
+  ["Catálogo", "#catalogo"],
   ["Proceso", "#proceso"],
   ["Inversión", "#inversion"],
   ["Contacto", "#contacto"],
@@ -64,8 +66,8 @@ const navItems = [
 const benefits = [
   {
     icon: Clock3,
-    title: "Menos tiempo de construcción",
-    text: "Procesos paralelos en planta y sitio que hacen avanzar tu proyecto con precisión.",
+    title: "Construcción rápida y eficiente",
+    text: "Procesos paralelos en planta y sitio que aceleran tu proyecto con precisión y control.",
   },
   {
     icon: DollarSign,
@@ -74,23 +76,23 @@ const benefits = [
   },
   {
     icon: Ruler,
-    title: "Diseño personalizado",
-    text: "Distribución, acabados y carácter arquitectónico creados alrededor de tu idea.",
+    title: "Diseños personalizables",
+    text: "Distribución, acabados y carácter arquitectónico adaptados a tu visión y terreno.",
   },
   {
     icon: Factory,
-    title: "Fabricación en planta",
-    text: "Un entorno controlado que mejora la consistencia, la supervisión y los acabados.",
+    title: "Fabricación de precisión",
+    text: "Un entorno controlado que mejora la consistencia, supervisión y calidad de acabados.",
   },
   {
     icon: Truck,
-    title: "Casas transportables",
-    text: "Módulos concebidos para trasladarse e instalarse eficientemente en el terreno.",
+    title: "Solución transportable o en sitio",
+    text: "Elige si deseas que tu casa sea transportada o construida directamente en tu terreno.",
   },
   {
     icon: MoveUpRight,
-    title: "Ideal para inversión y Airbnb",
-    text: "Una solución atractiva para crear experiencias memorables y activos rentables.",
+    title: "Ideal para vivir, vacacionar e invertir",
+    text: "Soluciones modulares para residencias, casas vacacionales, Airbnb y activos rentables.",
   },
 ];
 
@@ -210,7 +212,7 @@ const faqs = [
   ],
   [
     "¿Dónde están ubicados?",
-    "Estamos en Parque Industrial Tocumen Storage, Ciudad de Panamá, Panamá.",
+    "Estamos ubicados en Tocume Storage Complex, Ciudad de Panamá, Panamá. Puedes visitarnos o coordinar una asesoría virtual.",
   ],
   [
     "¿Trabajan fuera de Panamá?",
@@ -383,19 +385,20 @@ export function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
           >
-            Tu casa modular
+            Casas modulares
             <br />
-            está más cerca de
+            construidas para tu
             <br />
-            lo que imaginas
+            terreno y estilo de vida
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.42 }}
           >
-            Diseñamos y construimos casas modulares personalizadas con eficiencia,
-            sostenibilidad y arquitectura moderna.
+            En CONCREBOX diseñamos y desarrollamos viviendas modulares que pueden ser
+            transportadas o construidas directamente en sitio, combinando diseño moderno,
+            eficiencia constructiva y personalización.
           </motion.p>
           <motion.div
             className="hero__actions"
@@ -414,10 +417,10 @@ export function LandingPage() {
         </div>
         <div className="hero__facts">
           {[
-            "100% transportables",
-            "Fabricadas en planta",
-            "Sistema innovador",
-            "Instalación eficiente",
+            "Transportables o en sitio",
+            "Diseño personalizable",
+            "Construcción eficiente",
+            "Adaptadas a tu terreno",
           ].map((fact, index) => (
             <motion.div
               key={fact}
@@ -571,6 +574,8 @@ export function LandingPage() {
           </div>
         </div>
       </section>
+
+      <CatalogSection />
 
       <section id="proceso" className="process section">
         <div className="container">
@@ -898,7 +903,7 @@ export function LandingPage() {
                 </span>
                 <div>
                   <strong>CONCREBOX PTY</strong>
-                  <small>Parque Industrial Tocumen Storage</small>
+                  <small>Tocume Storage Complex</small>
                 </div>
               </div>
               <div className="map-card__meta">
@@ -906,11 +911,11 @@ export function LandingPage() {
                 <span>09.0699° N · 79.3835° W</span>
               </div>
               <a
-                href="https://www.google.com/maps/search/?api=1&query=Parque+Industrial+Tocumen+Storage+Panama"
+                href="https://maps.app.goo.gl/SKXq7bwCsm7174ko6?g_st="
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Abrir ubicación <MoveUpRight size={16} />
+                Ver ubicación en Google Maps <MoveUpRight size={16} />
               </a>
             </Reveal>
           </div>
@@ -978,10 +983,18 @@ export function LandingPage() {
             <div>
               <span>Ubicación</span>
               <p>
-                Parque Industrial Tocumen Storage
+                Tocume Storage Complex
                 <br />
                 Panama City, Panamá
               </p>
+              <a
+                href="https://maps.app.goo.gl/SKXq7bwCsm7174ko6?g_st="
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ marginTop: "12px", display: "inline-block" }}
+              >
+                Ver en Google Maps <MoveUpRight size={14} />
+              </a>
             </div>
           </div>
           <div className="footer__bottom">
